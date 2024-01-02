@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> LOGIN PAGE</title>
+    <style>
+    body{
+            background-color:Moccasin;
+    }
+</style>
+</head>
+<body>
+<form action="login"  method="POST" >
+    {% csrf_token %}
+    <h2 style="background-color:aqua"> LOGIN DETAILS  </h2>
+    <label> USERNAME </label>
+    <input type="text" name="username" placeholder="Enter your username"><BR><BR>
+    <label> PASSWORD </label>
+    <input type="password" name="password" placeholder="Enter your Password"><BR><BR>
+    <input type="submit" value="LOGIN " style="font-face: 'Comic Sans MS'; font-size: larger; color: #fff; background-color: #62529c; border: 2pt ridge ;height: 50px;width: 150px;cursor: pointer;">
+
+</form>
+{% for msg in messages %}
+<h2>{{msg}}</h2>
+{% endfor %}
+</body>
+</html>
